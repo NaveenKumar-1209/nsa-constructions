@@ -1,0 +1,354 @@
+/* Calculator Section */
+.calculator-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.calculator-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-section {
+    margin-bottom: 3rem;
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    max-width: 600px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #e74c3c;
+}
+
+.search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.search-results.show {
+    display: block;
+}
+
+.search-result-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-result-item:hover {
+    background-color: #f8f9fa;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.result-info h4 {
+    margin: 0 0 0.25rem 0;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.result-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.result-price {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.calculator-table-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.calculator-table-section h3 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.goods-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.goods-table th,
+.goods-table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.goods-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+    position: sticky;
+    top: 0;
+}
+
+.goods-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.goods-table input[type="number"] {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.goods-table input[type="number"]:focus {
+    outline: none;
+    border-color: #e74c3c;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.totals-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.total-row:last-child {
+    border-bottom: none;
+}
+
+.grand-total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    border-top: 2px solid #e74c3c;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+.total-label {
+    color: #666;
+}
+
+.total-value {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.calculator-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculator-actions .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.empty-table {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-box input {
+        margin-bottom: 1rem;
+    }
+    
+    .goods-table {
+        font-size: 0.9rem;
+    }
+    
+    .goods-table th,
+    .goods-table td {
+        padding: 8px 4px;
+    }
+    
+    .calculator-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .calculator-actions .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-table-section {
+        padding: 1rem;
+    }
+    
+    .goods-table th,
+    .goods-table td {
+        padding: 6px 2px;
+        font-size: 0.8rem;
+    }
+    
+    .goods-table input[type="number"] {
+        padding: 4px 6px;
+        font-size: 0.8rem;
+    }
+    
+    .remove-btn {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+    
+    .totals-section {
+        padding: 1rem;
+    }
+    
+    .total-row {
+        font-size: 0.9rem;
+    }
+    
+    .grand-total {
+        font-size: 1rem;
+    }
+}
+
+/* Price comparison styles */
+.difference {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.difference.higher {
+    color: #dc3545;
+}
+
+.difference.lower {
+    color: #28a745;
+}
+
+.difference-value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.trend-icon {
+    margin-left: 4px;
+}
+
+.grand-total.higher {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+.grand-total.lower {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.grand-total .trend-icon {
+    margin-left: 8px;
+}
+
+/* Table improvements for comparison */
+.goods-table th:nth-child(6),
+.goods-table td:nth-child(6) {
+    text-align: center;
+    font-weight: 600;
+}
+
+.goods-table th:nth-child(7),
+.goods-table td:nth-child(7),
+.goods-table th:nth-child(8),
+.goods-table td:nth-child(8) {
+    text-align: right;
+}
+
+/* Responsive adjustments for new columns */
+@media (max-width: 768px) {
+    .goods-table {
+        font-size: 0.8rem;
+    }
+    
+    .goods-table th,
+    .goods-table td {
+        padding: 6px 4px;
+    }
+    
+    .difference {
+        font-size: 0.75rem;
+    }
+    
+    .trend-icon {
+        width: 12px;
+        height: 12px;
+    }
+}
